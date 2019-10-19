@@ -1,0 +1,83 @@
+
+        {include file="common/head"}
+        <!--顶部通栏-->
+        <script src='/jiehun/goto/my-65547.js' language='javascript'></script>
+
+        <div class="position"><a href='{:url("index/index")}'>主页</a> > <a href='{:url("cate/index",array("cateid"=>$arrtt["cateid"]))}'>{$ca.catename}</a> ><a href='#'>{$arrtt.title}</a> >  </div>
+
+        <div class="overall">
+            <div class="left">
+                <div class="scrap">
+                    <h1>{$arrtt.title}</h1>
+                    <div class="spread">
+                        <span class="writor">发布时间：{$arrtt.time|date="Y-m-d",###}</span>
+                        <span class="writor">编辑：{$arrtt.author}</span>
+                        <span class="writor">标签：<a href='/jiehun/z97712.html'>{$arrtt.keywords}</a></span>
+                        <span class="writor">热度：{$arrtt.click}</span>
+                    </div>
+                </div>
+                
+                <!--百度分享-->
+                <script src='/jiehun/goto/my-65542.js' language='javascript'></script>
+
+                <div class="takeaway">
+                    <span class="btn arr-left"></span>
+                    <p class="jjxq">{$arrtt.desc}
+</p>
+                    <span class="btn arr-right"></span>
+                </div>
+
+                  <script src='/jiehun/goto/my-65541.js' language='javascript'></script>
+
+                <div class="substance">
+                    {$arrtt.content}
+                </div>
+
+
+                <div class="biaoqian">
+                   
+                </div>
+
+
+
+                <!--相关阅读 -->
+                <div class="xgread">
+                    <div class="til"><h4>相关阅读</h4></div>
+                    <div class="lef"><!--相关阅读主题链接--><script src='/jiehun/goto/my-65540.js' language='javascript'></script></div>
+                    <div class="rig">
+                        <ul>
+                            <li><a href='./images/20160907155021.html' target="_blank">蓝牙耳机怎么和手机连接 连接手机及电脑的方法</a></li>
+                            <li><a href='./images/20141026134140.html' target="_blank">湖南邵阳夏美玲资料照片 5岁留守女童当环卫工</a></li>
+                            <li><a href='./images/20140924132601.html' target="_blank">张彦文女友林佩真资料照片 砍杀女友事件原因真相</a></li>
+                            <li><a href='./images/20140917132145.html' target="_blank">天使女孩胡依萱个人资料 曝胡依萱案件始末</a></li>
+                            <li><a href='./images/20140916132072.html' target="_blank">周友平个人资料照片 连环性虐6男子致死案始末</a></li>
+                            <li><a href='./images/20140904131317.html' target="_blank">泰国小胖墩变性前男儿身照片 变身辣妹今夕对比</a></li>
+                            <li><a href='./images/20140828130836.html' target="_blank">女孩凡莎莎遇害死亡照片 蹊跷身亡凡料微博求助</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <!--频道推荐-->
+                <div class="hotsnew">
+                    <div class="til"><h4>频道推荐</h4></div>
+                    <ul>
+                        {volist name="tui" id='vo1'}
+                        <li><div class="tu"><a href='{./images/20160920156214.html}' target="_blank">
+                            <img src="__IMAGE__/{$vo1.pic}" alt="{$vo1.title}"/></a></div><p><a href='./images/20160920156214.html'>{$vo1.title} {$vo1.keywords}</a></p></li>
+                        {/volist}
+                        
+                    </ul>
+                </div>		
+            </div>
+{include file="common/right"}
+    
+</div>
+
+        <!--foot-->
+{include file="common/foot"}
+
+        <div style="display:none;"><script src='/jiehun/goto/my-65537.js' language='javascript'></script><script src="/jiehun/images/js/count_zixun.js" language="JavaScript"></script></div>
+
+    </body>
+</html>

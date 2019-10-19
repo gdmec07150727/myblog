@@ -1,0 +1,49 @@
+
+{include file="common/head"}
+<!--顶部通栏-->
+
+
+<div class="position"><a href='{:url("index/index")}'>主页</a> > <a href=''>{$ca.catename}</a> >  </div>
+
+<div class="overall">
+
+	<div class="left">
+		
+				{foreach name="searcher" id="vo"}
+			<div class="xnews2">
+				<div class="pic"><a target="_blank" href="{:url('article/index',array('arid'=>$vo['id']))}"><img src="__IMAGE__/{$vo.pic}" alt="{$vo.title}"/></a></div>
+				<div class="dec">
+				<h3><a target="_blank" href="{:url('article/index',array('arid'=>$vo['id']))}">{$vo.title}</a></h3>
+				<div class="time">发布时间：{$vo.time|date="Y-m-d",###}</div>
+				<p>{$vo.desc}</p>
+				<div class="time">
+				<?php
+					$aa = explode(',',$vo['keywords']);
+					foreach($aa as $k=>$v)
+					{
+						echo "<a href='#'>$v</a>";
+					}
+				?>
+				</div>
+				</div>
+			</div>
+		{/foreach}	
+				
+				<div class="pages">
+				<div class="plist" >
+				{$searcher->render()}
+				</div>
+				</div>
+		
+	</div>
+<!--右侧广告-->
+{include file="common/right"}
+	
+</div>
+<!--foot-->
+{include file="common/foot"}
+
+<div style="display:none;"><script src='goto/my-65537.js' language='javascript'></script><script src="images/js/count_zixun.js" language="JavaScript"></script></div>
+
+</body>
+</html>
